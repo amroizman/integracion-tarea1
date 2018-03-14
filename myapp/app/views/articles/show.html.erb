@@ -1,19 +1,22 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Titulo:</strong>
+<h1>
   <%= @article.titulo %>
-</p>
+</h1>
 
-<p>
-  <strong>Bajada:</strong>
+<span><%= @article.created_at %></span>
+
+<h2>
   <%= @article.bajada %>
-</p>
+</h2>
 
 <p>
-  <strong>Cuerpo:</strong>
   <%= @article.cuerpo %>
 </p>
 
 <%= link_to 'Edit', edit_article_path(@article) %> |
 <%= link_to 'Back', articles_path %>
+
+<br><br>
+
+<h1>Comentarios</h1>
