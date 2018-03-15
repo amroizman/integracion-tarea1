@@ -21,6 +21,12 @@
     <%= f.text_field :contenido %>
   </div>
 
+  <div class="field">
+    <%= f.hidden_field :article_id, value: comment.article_id %>
+
+  </div>
+
+
   <div class="actions">
     <%= f.submit %>
   </div>

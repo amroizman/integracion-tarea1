@@ -20,9 +20,10 @@
 <br><br>
 
 <h1>Comentarios</h1>
-<% Comment.all.each do |comment| %>
+<% @article.comments do |comment| %>
     <h3><%= comment.nombre %></h3>
     <p><%= comment.contenido %></p>
-    <br>
 <% end %>
 <h3>Comenta la Noticia</h3>
+
+<%= render 'comments/form', comment: Comment.new(article_id: @article.id) %>
