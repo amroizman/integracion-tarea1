@@ -1,0 +1,23 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Noticias!</h1>
+<br>
+<br>
+    <% @articles.each do |article| %>
+
+        <h2><%= link_to article.titulo, article %></h2>
+        <span><%= article.created_at %></span>
+        <h3><%= article.bajada %></h3>
+        <p><%= article.cuerpo %></p>
+        <p><%= article.comments.count %> comentarios</p>
+
+        <br>
+
+        <span><%= link_to 'Edit', edit_article_path(article) %></span>
+        <span><%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %></span>
+        <br>
+        <br>
+    <% end %>
+
+<br>
+<%= link_to 'New Article', new_article_path %>
