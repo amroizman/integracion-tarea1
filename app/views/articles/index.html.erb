@@ -13,11 +13,11 @@
 
         <br>
 
-        <span><%= link_to 'Edit', edit_article_path(article) %></span>
-        <span><%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %></span>
+        <span><%= link_to 'Editar', edit_article_path(article) %></span>
+        <span><%= link_to 'Eliminar', article, method: :delete, data: { confirm: 'Seguro?' } %></span>
         <br>
         <br>
     <% end %>
 
 <br>
-<%= link_to 'New Article', new_article_path %>
+<%= link_to 'Nuevo artículo', new_article_path %>
