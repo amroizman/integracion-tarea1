@@ -8,7 +8,7 @@
         <h2><%= link_to article.titulo, article %></h2>
         <span><%= article.created_at %></span>
         <h3><%= article.bajada %></h3>
-        <p><%= article.cuerpo %></p>
+        <p><%= truncate(article.cuerpo, length: 500, separator: ' ') %></p>
         <p><%= article.comments.count %> comentarios</p>
 
         <br>
